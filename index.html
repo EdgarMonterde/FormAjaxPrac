@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Formulario AJAX</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="padre">
+        <div class="hijo">
+            <form id="formulario" name="formulario" class="formulario">
+                <h1>FORMULARIO</h1>
+                <div class="identidad">
+                    <label>Nombre: <input name="nombre" id="nombre" placeholder="Nombre" class="form-control"
+                            type="text" /></label>
+                    <label>Segundo nombre: <input name="segundonombre" id="segundonombre" placeholder="Segundo nombre"
+                            class="form-control" type="text" /></label><br />
+                    <label>Apellido: <input name="apellido" id="apellido" placeholder="Apellido" class="form-control"
+                            type="text" /></label>
+                    <label>Segundo apellido: <input name="segapellido" id="segapellido" placeholder="Segundo apellido"
+                            class="form-control" type="text" /></label>
+                    <!--<label>Edad: <input name="edad" id="edad" placeholder="Edad" class="form-control"
+                            type="text" /></label><br />-->
+                    <br /><br /><label> Edad: </label>
+                    <select class="browser-default custom-select" name="edad" id="edad">
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option selected value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                    </select><br /><br />
+                </div>
+
+                <div class="sexos">
+                    <label>Sexo:</label><br />
+                    <label><input type="radio" name="sexo" id="sexo" value="Masculino" /> Masculino</label><br />
+                    <label><input type="radio" name="sexo" id="sexo" value="Femenino" /> Femenino</label>
+                </div>
+
+                <div class="refrescos">
+                    <br /><label>¿Que refrescos te gustan?</label><br />
+                    <label><input type="checkbox" name="coca" id="coca" /> Coca</label><br />
+                    <label><input type="checkbox" name="pepsi" id="pepsi" /> Pepsi</label><br />
+                    <label><input type="checkbox" name="corona" id="corona" /> Corona</label><br />
+                    <label><input type="checkbox" name="jugo" id="jugo" /> Jugo</label>
+                </div>
+
+                <div class="lugares">
+                    <br /><label>¿De donde eres?</label><br />
+                    <select name="lugar" id="lugar" class="browser-default custom-select">
+                        <option value="yucatan">Yucatan</option>
+                        <option value="CDMX">CDMX</option>
+                        <option value="Puebla">Puebla</option>
+                        <option selected value="otro">Otro</option>
+                    </select><br /><br />
+
+                    <!--<select name="lugar" id="lugar">
+                        <option value="yucatan">Yucatan</option>
+                        <option value="CDMX">CDMX</option>
+                        <option value="Puebla">Puebla</option>
+                        <option selected value="otro">Otro</option>
+                    </select><br /><br />-->
+                </div>
+
+                <div class="comentarios">
+                    <label for="comentarios">Comentarios: </label>
+                    <textarea class="form-control rounded-0" name="comentarios"
+                        placeholder="Escribe un comentario/descripcion" id="comentarios" rows="10"></textarea>
+                    <br />
+                </div>
+                <!--<div>
+                    <textarea rows="6" cols="55" name="comentarios" id="comentarios"
+                        placeholder="Agrega algun comentario que gustes"></textarea>
+                    <br /><br />
+                </div>-->
+
+                <!--<input type="submit" name="enviar" value="Enviar formulario" id="enviar" />-->
+                <!--<button type="submit" class="btn btn-primary" name="enviar" id="enviar">Enviar formulario</button>-->
+                <input type="button" name="enviarfor" id="enviarfor" value="Enviar datos" />
+                <!--<div class="spinner-border text-dark cir" role="status">
+                    <span class="sr-only"></span>
+                </div>-->
+                <div class="respuesta">
+                    <br />
+                    <span id="datosenviados"></span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src='main.js'></script>
+</body>
+
+</html>
